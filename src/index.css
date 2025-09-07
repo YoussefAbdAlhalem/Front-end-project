@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a li {
+    list-style: none;
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #292b2c;
+    font-family: 'Roboto';
+}
