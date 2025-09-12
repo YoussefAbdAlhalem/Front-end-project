@@ -1,45 +1,82 @@
-import React from 'react'
+import {React} from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import './nav.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "bootstrap/dist/css/bootstrap.min.css";
+import { GoSearch } from "react-icons/go";
+import { PiShoppingCartThin } from "react-icons/pi";
+import { IoIosMenu } from "react-icons/io";
+import { IoCloseOutline } from "react-icons/io5";
 
 //_______________________________//
 
 const Navbar = () => {
 	return (
-		<hea der>
-			<nav className='navbar'>
+		<nav className='navbar' user-select="none">
+			<div className='nav-container'>
 				<section className="logo-section">
 					<Link to="/">
 						<img src="/photos/Logo.png" alt="logo" className='logo' />
 					</Link>
 				</section>
 				{/*  */}
-				<section className='nav-links'>
-					<ul>
+				<section className="nav-right">
+					<section className='side-bar'>
+						<section className='nav-burger menu' onClick={() => document.querySelector('.side-bar').classList.remove('show')}>
+							<i className='close'><IoCloseOutline /></i>
+						</section>
 						<li>
-							<NavLink to="/home">Home</NavLink>
+							<NavLink to="/home" className={"nav-item"}>Home</NavLink>
 						</li>
 						<li>
-							<NavLink to="/cart">Cart</NavLink>
+							<NavLink to="/cart" className={"nav-item"}>Pages</NavLink>
 						</li>
 						<li>
-							<NavLink to="/cart">Cart</NavLink>
+							<NavLink to="/cart" className={"nav-item"}>Products</NavLink>
 						</li>
 						<li>
-							<NavLink to="/cart">Cart</NavLink>
+							<NavLink to="/cart" className={"nav-item"}>Blog</NavLink>
 						</li>
-					</ul>
+						<li>
+							<NavLink to="/cart" className={"nav-item"}>Shop</NavLink>
+						</li>
+						<li>
+							<NavLink to="/cart" className={"nav-item"}>Contact us</NavLink>
+						</li>
+					</section>
+					<section className='nav-list'>
+						<li>
+							<NavLink to="/home" className={"nav-item"}>Home</NavLink>
+						</li>
+						<li>
+							<NavLink to="/cart" className={"nav-item"}>Pages</NavLink>
+						</li>
+						<li>
+							<NavLink to="/cart" className={"nav-item"}>Products</NavLink>
+						</li>
+						<li>
+							<NavLink to="/cart" className={"nav-item"}>Blog</NavLink>
+						</li>
+						<li>
+							<NavLink to="/cart" className={"nav-item"}>Shop</NavLink>
+						</li>
+						<li>
+							<NavLink to="/cart" className={"nav-item"}>Contact us</NavLink>
+						</li>
+					</section>
+					<section className='search-section'>
+						<i><GoSearch /></i>
+					</section>
+					<section className='cart-section'>
+						<i><PiShoppingCartThin /></i>
+					</section>
+					{/* _________________________________________________________________________ */}
+					<section className='nav-burger' onClick={() => document.querySelector('.side-bar').classList.add('show')}>
+						<i className='menu'><IoIosMenu /></i>
+					</section>
 				</section>
-				<section className='search-section'>
-
-				</section>
-				<section className='cart-section'>
-
-				</section>
-			</nav>
-		</hea>
+			</div>
+		</nav>
 	)
 }
 
