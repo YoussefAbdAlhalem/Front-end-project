@@ -22,12 +22,14 @@ nav li {
 /* __________________________ */
 .navbar {
     width: 100%;
-    height: 50px;
-    display: sticky;
+    height: 58px;
+    display: block;
+    position: sticky !important;
     top: 0;
     left: 0;
     background: #fff;
     z-index: 100;
+    margin-bottom: 10px;
 }
 
 .nav-container {
@@ -147,6 +149,14 @@ nav li {
         display: none;
     }
 }
+@media (max-width: 930PX) {
+    .contact {
+        display: none;
+    }
+    
+
+}
+
 
 
 @media (max-width: 768px) {

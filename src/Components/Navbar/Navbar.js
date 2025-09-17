@@ -61,7 +61,7 @@ const Navbar = () => {
 							<NavLink to="/cart" className={"nav-item"}>Shop</NavLink>
 						</li>
 						<li>
-							<NavLink to="/cart" className={"nav-item"}>Contact us</NavLink>
+							<NavLink to="/cart" className={"nav-item contact"}>Contact us</NavLink>
 						</li>
 					</section>
 					<section className='search-section'>

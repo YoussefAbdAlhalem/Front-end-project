@@ -29,24 +29,18 @@ const Top = () => {
       </div >
       <div className="top-right col-md-6">
         <section className="section">
-          <section>
-            <span className="compare">
-              <TbArrowsShuffle2 className="compare-icon" />
-              <span className="com-label label">Compare</span>
-            </span>
-          </section>
-          <section>
-            <span className="wishlist">
-              <CiHeart className="heart-icon" />
-              <span className="wish-label label">Wishlist</span>
-            </span>
-          </section>
-          <section>
-            <span className="login">
-              <IoPersonOutline className="person-icon" />
-              <span className="log-label label">Login</span>
-            </span>
-          </section>
+          <span className="compare">
+          <TbArrowsShuffle2 className="compare-icon" />
+          <span className="com-label label">Compare</span>
+        </span>
+        <span className="wishlist">
+          <CiHeart className="heart-icon" />
+          <span className="wish-label label">Wishlist</span>
+        </span>
+        <span className="login">
+          <IoPersonOutline className="person-icon" />
+          <span className="log-label label">Login</span>
+        </span>
         </section>
       </div>
     </div>

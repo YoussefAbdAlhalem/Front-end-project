@@ -1,0 +1,123 @@
+.slider {
+    position: relative;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.slide {
+    position: absolute;
+    display: flex !important;
+    justify-content: flex-start;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 1;
+    padding: 0 15px;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+}
+
+
+.controlPrev {
+    left: 0;
+    width: 5%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    border-radius: 0 10px 10px 0;
+}
+
+.controlNext {
+
+    right: 0;
+    width: 5%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px 0 0 10px;
+}
+
+.controlNext:hover,
+.controlPrev:hover {
+    background: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.btnFillOut {
+
+    background-color: #FF324D;
+    border: 1px solid #FF324D;
+    color: #000;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.btn-fill-out:hover {
+    color: #000 !important;
+}
+
+.btn {
+    border-width: 1px;
+    cursor: pointer;
+    line-height: normal;
+    padding: 12px 25px;
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #fff;
+    border: 1px solid #FF324D;
+    /* color: #FF324D !important; */
+    color: #000 !important;
+
+}
+
+
+
+/* __________________ */
+
+.image {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-indicators img {
+    width: 70px;
+    display: block;
+    overflow: hidden;
+}
+
+.carousel-indicators button {
+    width: max-content !important;
+}
+
+.carousel-indicators {
+    position: fixes;
+}
+
+.middle {
+    font-size: 44px !important;
+    font-family: 'Roboto' !important;
+    font-weight: 700 !important;
+    margin: 0 0 20px;
+}
