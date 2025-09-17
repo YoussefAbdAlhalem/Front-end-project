@@ -30,7 +30,6 @@ nav li {
     background: #fff;
     z-index: 100;
     margin-bottom: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
 .nav-container {
@@ -144,19 +143,17 @@ nav li {
 .side-bar li .nav-item {
     width: 100%;
 }
-
 /* _______________________________________________ */
 @media (min-width: 768px) {
     .side-bar.show {
         display: none;
     }
 }
-
 @media (max-width: 930PX) {
     .contact {
         display: none;
     }
-
+    
 
 }
 
@@ -170,14 +167,13 @@ nav li {
     .nav-list {
         display: none;
     }
-
+    
 }
 
 @media (max-width: 400px) {
     .logo-section {
         height: 36px;
     }
-
     .side-bar {
         width: 100%;
     }
@@ -189,7 +185,6 @@ nav li {
 
     }
 }
-
 /* __________________________________ */
 .checkbox {
     width: 20px;
@@ -209,41 +204,9 @@ nav li {
 
 .side-bar.show~.nav-burger .menu {
     opacity: calc(0.1);
-    transition: 0.4s ease-out;
+    transition:0.4s ease-out ;
 }
-
 .side-bar~.nav-burger .menu {
     opacity: calc(1);
-    transition: 0.4s ease-out;
-}
-
-
-
-
-
-
-.header_wrap.nav-fixed {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-    position: fixed;
-    right: 0;
-    left: 0;
-    top: 0;
-    z-index: 1041;
-    -webkit-animation: slideInDown 0.65s cubic-bezier(0.23, 1, 0.32, 1);
-    -moz-animation: slideInDown 0.65s cubic-bezier(0.23, 1, 0.32, 1);
-    -o-animation: slideInDown 0.65s cubic-bezier(0.23, 1, 0.32, 1);
-    animation: slideInDown 0.65s cubic-bezier(0.23, 1, 0.32, 1);
-    -webkit-animation-fill-mode: none;
-    -moz-animation-fill-mode: none;
-    -o-animation-fill-mode: none;
-    animation-fill-mode: none;
-}
-
-.header_wrap.fixed-top {
-    position: relative;
-    padding-right: 0 !important;
-}
-
-.header_wrap {
-    transition: all 0.5s ease 0s;
+    transition:0.4s ease-out ;
 }
