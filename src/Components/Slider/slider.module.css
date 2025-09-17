@@ -1,6 +1,37 @@
 .slider {
     position: relative;
     width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: block;
+}
+
+@media (max-width: 650px) {
+    .slider{
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .slider {
+        height: 350px;
+    }
+
+    .image {
+        background-position: center center !important;
+        background-size: cover !important;
+        object-fit: cover !important;
+        height: 350px !important;
+    }
+
+    .slide {
+        left: 5% !important;
+    }
+
+    .middle {
+        font-size: 32px !important;
+
+    }
 }
 
 a {

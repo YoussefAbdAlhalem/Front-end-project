@@ -1,0 +1,59 @@
+.section.pb_20,
+.pb_20 {
+    padding-bottom: 20px;
+}
+
+.section {
+    padding: 100px 0;
+    position: relative;
+}
+@media (max-width: 650px) {
+    .section {
+        padding:20px 0;
+    }
+    
+}
+.single_banner {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.single_banner:hover img {
+	-moz-transform: scale(1.06);
+	-webkit-transform: scale(1.06);
+	transform: scale(1.06);
+}
+
+.single_banner img {
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+img {
+    max-width: 100%;
+}
+.single_banner_info {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    padding: 20px;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 50%;
+}
+.single_bn_title{
+    font-weight: bold;
+    font-size: 32px;
+}
+.single_bn_link {
+    position: relative;
+}
+.single_bn_link::before {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    height: 7px;
+    background-color: rgba(255, 50, 77, 0.2);
+    width: 100%;
+    z-index: -1;
+}
