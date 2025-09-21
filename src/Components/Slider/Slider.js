@@ -4,10 +4,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import sliderStyles from './slider.module.css'
 
 const Slider = () => {
-    const aStyle = {
-        width: '100%',
-        height: '100%'
-    };
+
     return (
         <div className={sliderStyles.slider}>
             <div className={`carousel slide ${sliderStyles.carousel}`}
@@ -25,9 +22,7 @@ const Slider = () => {
                                         <h5 className="mb-3 staggered-animation font-weight-light" data-animation="slideInLeft" data-animation-delay="0.5s">50% off in all products</h5>
                                         <h2 className={`"staggered-animation" data-animation="slideInLeft" data-animation-delay="1s" ${sliderStyles.middle}`}>Man Fashion</h2>
                                         {/*  eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                                        <div className={`${sliderStyles.btnFillOut} ${sliderStyles.btn}`}>
-                                            <a style={aStyle} className="btn btn-fill-out rounded-0 staggered-animation text-uppercase" href="shop-left-sidebar.html" data-animation="slideInLeft" data-animation-delay="1.5s">Shop Now</a>
-                                        </div>
+                                            <a className={`${sliderStyles.btn} ${sliderStyles.btnFillOut} rounded-0 staggered-animation text-uppercase`} href="shop-left-sidebar.html" data-animation="slideInLeft" data-animation-delay="1.5s">Shop Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -46,9 +41,8 @@ const Slider = () => {
                                     <div className={`banner_content  overflow-hidden ${sliderStyles.slide}`}>
                                         <h5 className="mb-3 staggered-animation font-weight-light" data-animation="slideInLeft" data-animation-delay="0.5s">Taking your Viewing Experience to Next Level</h5>
                                         <h2 className={`"staggered-animation" data-animation="slideInLeft" data-animation-delay="1s" ${sliderStyles.middle}`}>Summer Sale</h2>
-                                        <div className={`${sliderStyles.btnFillOut} ${sliderStyles.btn}`}>
-                                            <a className="btn btn-fill-out rounded-0 staggered-animation text-uppercase" href="shop-left-sidebar.html" data-animation="slideInLeft" data-animation-delay="1.5s">Shop Now</a>
-                                        </div>
+                                        
+                                            <a className={`${sliderStyles.btn} ${sliderStyles.btnFillOut} rounded-0 staggered-animation text-uppercase`} href="shop-left-sidebar.html" data-animation="slideInLeft" data-animation-delay="1.5s">Shop Now</a>
                                     </div>
                                 </div>
                             </div>

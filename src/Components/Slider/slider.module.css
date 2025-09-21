@@ -92,37 +92,6 @@ a {
     cursor: pointer;
 }
 
-.btnFillOut {
-
-    background-color: #FF324D;
-    border: 1px solid #FF324D;
-    color: #000;
-    position: relative;
-    overflow: hidden;
-    z-index: 10;
-}
-
-.btn-fill-out:hover {
-    color: #000 !important;
-}
-
-.btn {
-    border-width: 1px;
-    cursor: pointer;
-    line-height: normal;
-    padding: 12px 25px;
-    text-transform: capitalize;
-    transition: all 0.3s ease-in-out;
-}
-
-.btn:hover {
-    background-color: #fff;
-    border: 1px solid #FF324D;
-    /* color: #FF324D !important; */
-    color: #000 !important;
-
-}
-
 
 
 /* __________________ */
@@ -151,4 +120,49 @@ a {
     font-family: 'Roboto' !important;
     font-weight: 700 !important;
     margin: 0 0 20px;
+}
+
+
+.btnFillOut {
+    background-color: transparent;
+    border: 1px solid #FF324D;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btnFillOut::before,
+.btnFillOut::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #FF324D;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+    width: 51%;
+}
+
+.btnFillOut::after {
+    right: 0;
+    left: auto;
+}
+
+.btnFillOut:hover:before,
+.btnFillOut:hover:after {
+    width: 0;
+}
+
+.btnFillOut:hover {
+    color: #FF324D !important;
+}
+.btn {
+    border-width: 1px;
+    cursor: pointer;
+    line-height: normal;
+    padding: 12px 35px;
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
 }

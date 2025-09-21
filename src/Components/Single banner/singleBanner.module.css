@@ -1,0 +1,73 @@
+.bg_light_blue2 {
+    background-color: #f5f4fc !important;
+}
+
+.medium_divider {
+    height: 50px;
+}
+
+.heading_s1 {
+    margin-bottom: 25px;
+}
+
+.trading_img {
+    margin-top: -40px;
+}
+
+img {
+    max-width: 100%;
+}
+.section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.btn {
+    border-width: 1px;
+    cursor: pointer;
+    line-height: normal;
+    padding: 12px 35px;
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+}
+
+.btnFillOut {
+    background-color: transparent;
+    border: 1px solid #FF324D;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btnFillOut::before,
+.btnFillOut::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #FF324D;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+    width: 51%;
+}
+
+.btnFillOut::after {
+    right: 0;
+    left: auto;
+}
+
+.btnFillOut:hover:before,
+.btnFillOut:hover:after {
+    width: 0;
+}
+
+.btnFillOut:hover {
+    color: #FF324D !important;
+}
+.sub_heading {
+    color: #FF324D;
+    margin-bottom: 10px;
+    display: block;
+}
