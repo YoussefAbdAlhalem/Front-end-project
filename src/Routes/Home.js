@@ -9,7 +9,7 @@ import FeaturedProducts from "../Components/FeaturedProducts/FeaturedProducts"
 const Home = () => {
   return (
     <> 
-      <Top/>
+      {window.screen.width > 800 && <Top/>}
       <Navbar/>
       <Slider/>
       <Banner/>

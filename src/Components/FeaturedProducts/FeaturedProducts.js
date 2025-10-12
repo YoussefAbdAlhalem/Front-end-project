@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import axios from 'axios';
 
-const FeaturedProducts = () => {
+const FeaturedProducts = ({ key, element }) => {
     const [data, setData] = useState([]);
     const [wishlist, setWishlist] = useState([]);
 
@@ -13,10 +13,10 @@ const FeaturedProducts = () => {
             .then((res) => setData(res.data))
             .catch((err) => console.log(err))
     }, []);
-
-    const handleAddToCart = (product) => {
-        console.log('Added to cart:', product.title);
-        // Add your cart logic here
+    let cartItems = JSON.parse(window.sessionStorage.getItem('cart')) || []
+    const handleAddToCart = (x) => {
+        cartItems.push(x);
+        window.sessionStorage.setItem('cart', JSON.stringify(cartItems));
     };
 
     const handleWishlist = (productId) => {
@@ -41,7 +41,7 @@ const FeaturedProducts = () => {
                     <div className={FeaturedProductsStyles["product-card"]} key={product.id}>
                         <div className={FeaturedProductsStyles["product-image-container"]}>
                             <img src={product.image} alt={product.title} className={FeaturedProductsStyles["product-image"]} />
-                            
+
                             {/* Product Actions */}
                             <div className={FeaturedProductsStyles["product-actions"]}>
                                 <button
@@ -53,9 +53,11 @@ const FeaturedProducts = () => {
                                 </button>
                                 <button
                                     className={FeaturedProductsStyles["action-btn"]}
-                                    title="Quick View"
+                                    title="View Product"
+                                    onClick={() => window.location.href = `/products/${product.id}`}
                                 >
-                                    👁️
+                                    ➡️
+
                                 </button>
                             </div>
 

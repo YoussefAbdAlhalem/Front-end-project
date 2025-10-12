@@ -67,8 +67,8 @@ const Navbar = () => {
 					<section className='search-section'>
 						<i><GoSearch /></i>
 					</section>
-					<section className='cart-section'>
-						<i><PiShoppingCartThin /></i>
+					<section  className='cart-section'>
+						<NavLink to="/cart" ><i><PiShoppingCartThin /></i></NavLink>
 					</section>
 					{/* _________________________________________________________________________ */}
 					<section className='nav-burger' onClick={() => document.querySelector('.side-bar').classList.add('show')}>

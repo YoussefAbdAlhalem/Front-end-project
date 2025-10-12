@@ -13,10 +13,10 @@ const HomeProducts = () => {
             .then((res) => setData(res.data))
             .catch((err) => console.log(err))
     }, []);
-
-    const handleAddToCart = (product) => {
-        console.log('Added to cart:', product.title);
-        // Add your cart logic here
+    let cartItems = JSON.parse(window.sessionStorage.getItem('cart')) || []
+    const handleAddToCart = (x) => {
+        cartItems.push(x);
+        window.sessionStorage.setItem('cart', JSON.stringify(cartItems));
     };
 
     const handleWishlist = (productId) => {
@@ -55,12 +55,16 @@ const HomeProducts = () => {
                                 >
                                     {wishlist.includes(product.id) ? '❤️' : '🤍'}
                                 </button>
+
                                 <button
                                     className={HomeProductsStyles["action-btn"]}
-                                    title="Quick View"
+                                    title="View Product"
+                                    onClick={() => window.location.href = `/products/${product.id}`}
                                 >
-                                    👁️
+                                    ➡️
+
                                 </button>
+
                             </div>
 
                         </div>
