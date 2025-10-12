@@ -1,15 +1,23 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import Navbar from '../Components/Navbar/Navbar';
 import styles from './singleProduct.module.css'
 
 const SingleProduct = () => {
-    const { id } = useParams(); // Destructure directly
+    const [width, setWidth] = useState(window.innerWidth); 
+
+    useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [quantity, setQuantity] = useState(1);
-
     useEffect(() => {
         const fetchProduct = async () => {
             try {
@@ -49,34 +57,37 @@ const SingleProduct = () => {
     if (!product) return <div className={styles.error}>Product not found</div>;
 
     return (
-        <div className={styles.singleProduct}>
-            <div className={styles.productWrapper}>
-                <div className={styles.productImageWrapper}>
-                    <img src={product.image} alt={product.title} />
-                </div>
-                <div className={styles.productInfo}>
-                    <h1 className={styles.productTitle}>{product.title}</h1>
-                    <div className={styles.productPrice}>${product.price}</div>
-                    <div className={styles.quantitySection}>
-                        <div>Quantity</div>
-                        <input
-                            type="number"
-                            min={1}
-                            max={10}
-                            value={quantity}
-                            onChange={handleQuantityChange}
-                        />
-                        <button
-                            className={styles.addToCartButton}
-                            onClick={handleAddToCart}
-                        >
-                            Add to Cart
-                        </button>
+        <>
+            <Navbar />
+            <div className={styles.singleProduct}>
+                <div className={styles.productWrapper}>
+                    <div className={styles.productImageWrapper}>
+                        <img src={product.image} alt={product.title} />
                     </div>
-                    <div className={styles.productDescription}>{product.description}</div>
+                    <div className={styles.productInfo}>
+                        <h1 className={styles.productTitle}>{product.title}</h1>
+                        <div className={styles.productPrice}>${product.price}</div>
+                        <div className={styles.quantitySection}>
+                            <div>Quantity</div>
+                            <input
+                                type="number"
+                                min={1}
+                                max={10}
+                                value={quantity}
+                                onChange={handleQuantityChange}
+                            />
+                            <button
+                                className={styles.addToCartButton}
+                                onClick={handleAddToCart}
+                            >
+                                Add to Cart
+                            </button>
+                        </div>
+                        <div className={styles.productDescription}>{width > 500 ? product.description : product.description.slice(0, 50)}</div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

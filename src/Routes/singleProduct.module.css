@@ -118,6 +118,9 @@
     background: #f7fafc;
     border-radius: 8px;
     border-left: 4px solid #4299e1;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    
 }
 
 /* Loading and Error States */

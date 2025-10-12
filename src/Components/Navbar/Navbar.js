@@ -35,10 +35,10 @@ const Navbar = () => {
 							<NavLink to="/cart" className={"nav-item"}>Products</NavLink>
 						</li>
 						<li>
-							<NavLink to="/cart" className={"nav-item"}>Blog</NavLink>
+							<NavLink to="/login" className={"nav-item"}>Login</NavLink>
 						</li>
 						<li>
-							<NavLink to="/cart" className={"nav-item"}>Shop</NavLink>
+							<NavLink to="/register" className={"nav-item"}>Register</NavLink>
 						</li>
 						<li>
 							<NavLink to="/cart" className={"nav-item"}>Contact us</NavLink>
@@ -55,10 +55,10 @@ const Navbar = () => {
 							<NavLink to="/cart" className={"nav-item"}>Products</NavLink>
 						</li>
 						<li>
-							<NavLink to="/cart" className={"nav-item"}>Blog</NavLink>
+							<NavLink to="/login" className={"nav-item"}>Login</NavLink>
 						</li>
 						<li>
-							<NavLink to="/cart" className={"nav-item"}>Shop</NavLink>
+							<NavLink to="/register" className={"nav-item"}>Register</NavLink>
 						</li>
 						<li>
 							<NavLink to="/cart" className={"nav-item contact"}>Contact us</NavLink>
